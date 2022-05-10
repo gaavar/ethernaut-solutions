@@ -3,9 +3,11 @@ pragma solidity >=0.8.0 <0.9.0;
 
 contract ChallengeFallback {
     address payable fallbackInstance;
+
     constructor(address payable _fallbackInstance) {
         fallbackInstance = _fallbackInstance;
     }
+
     function becomeOwner() public payable {
         bytes memory payload = abi.encodeWithSignature('contribute()');
         (bool success,) = address(fallbackInstance).call{value: msg.value/2}(payload);
