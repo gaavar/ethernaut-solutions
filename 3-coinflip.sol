@@ -1,6 +1,6 @@
 import "./CoinFlip.sol";
 
-contract coinFlipAttack {
+contract CoinFlipAttack {
     CoinFlip public vulnerableContract = CoinFlip(0x2e696745a0692C3d828BDfEB6B2b22841717F270);
 
     uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
